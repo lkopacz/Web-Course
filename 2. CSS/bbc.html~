@@ -1,0 +1,284 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="news, england" />
+<meta name="description" content="A site with UK's latest news" />
+<title>Lindsey's BBC Site</title>
+
+<style type="text/css">
+
+body {
+	margin: 0;
+	font-family: arial,helvetica,sans-serif;
+}
+
+#top-bar {
+	background-color: #790000;
+	width: 100%;
+	height: 40px;
+	color: white;
+}
+
+.fixed-width {
+	width: 1050px;
+	margin: 0 auto;
+	height:100%;
+}
+
+#bbc-logo {
+	padding: 8px 10px 8px 0;
+	float:left; 
+	border-right: 1px solid #990000;
+}
+
+#bbc-logo img{
+	background-color: #ffffff;
+}
+
+#sign-in {
+	font-weight: bold;
+	font-size: 0.9em;
+	padding: 0px 80px 0px 20px;
+	border-right: 1px solid #990000;
+	float: left; 
+	height: 100%;
+}
+
+#top-menu {
+	float: left;
+}
+
+#top-menu ul {
+	margin:0;
+	padding:0;
+}
+
+#top-menu li {
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 0.9em;
+	border-right: 1px solid #990000;
+	padding: 10px 20px 10px 20px;
+	float: left;
+}
+
+#search {
+	float: left;
+	padding: 8px 0 0 10px;
+}
+
+#search input{
+	height:25px;
+	border:none;
+	font-size:10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-image:url(http://static.bbci.co.uk/frameworks/barlesque/2.83.4/desktop/3.5/img/blq-search_grey_alpha.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+#news-bar {
+	background-color: #990000;
+	width: 100%;
+	height: 90px;
+	color: white;
+}
+
+.break {
+	clear:both;
+}
+
+#news-header {
+	margin:0;
+	font-size:3em;
+	padding-top: 15px;
+	float:left;
+}
+
+#uk {
+	font-size:0.7em;
+	padding-left: 20px;
+}
+
+#rss {
+	float:right;
+	margin-top: 40px;
+	font-weight: bold;
+}
+
+#topic-menu {
+
+}
+
+#topic-menu ul {
+	background-color: #3E0C0D;
+	margin: 0;
+	padding: 5px 0 0 5px;
+	height: 20px;
+	margin: -5px;
+}
+
+#topic-menu li {
+	list-style: none;
+	font-size: 0.8em;
+	border-right: 1px solid #990000;
+	float: left;
+	background-color: none;
+	padding: 0 6px 0 6px;
+	font-weight:bold;
+}
+
+.selected {
+	background-color: #EDEDED;
+	color: #505050;
+	height:20px;
+	position: relative;
+	top: -4px;
+	padding-top: 4px !important;
+}
+
+#content {
+	width: 100%;
+	color: #505050;
+	font-size: .75em;
+}
+
+.date {
+	font-weight:bold;
+}
+
+#content h1 {
+	color:#265485;
+	font-size:2.641em;
+}
+
+.headline-image {
+	float: left;
+}
+
+.news-item {
+	position: relative;
+	left: 10px;
+	font-size: 1.1em;
+	width: 300px;
+	float:left;
+}
+
+.news-item a {
+	color:#1F4F82;
+	text-decoration: none;
+	padding-top: 10px;
+}
+
+.news-item a:hover {
+	color:#1F4F82;
+	text-decoration: underline;
+	line-height: 16px;
+}
+
+#watch-div {
+	background-color: #EEEEEE;
+	float: right;
+	width: 350px;
+	position: relative;
+	top: -80px;
+}
+
+#watch-div h2 {
+	color: #505050;
+	margin: 0;
+	padding: 10px 10px 0 10px;
+	font-size: 2em;
+}
+
+</style>
+</head>
+<body>
+	<div id="container">
+		<div id="top-bar">
+			<div class="fixed-width">
+				<div id="bbc-logo">
+					<img src="http://static.bbci.co.uk/frameworks/barlesque/2.83.4/desktop/3.5/img/blq-blocks_grey_alpha.png" alt="bbc" />
+				</div>
+				<div id="sign-in">
+					<p>Sign In</p>				
+				</div>
+				<div id="top-menu">
+					<ul>
+						<li>News</li>
+						<li>Sports</li>
+						<li>Weather</li>
+						<li>iPlayer</li>
+						<li>TV</li>
+						<li>Radio</li>
+						<li>More..</li>
+					</ul>
+				</div>
+				<div id="search">
+					<input type="text" placeholder="Search" />				
+				</div>
+			</div>
+		</div>
+				
+		<div class="break"></div>		
+		
+		<div id="news-bar">
+			<div class="fixed-width">
+				<p id="news-header">NEWS<span id="uk">UK</span></p>
+				<div id="rss">
+					RSS<img src="https://www.business.gov.om/wps/PA_OSS3_Portal/gfx/img/rss_icon.png" alt="rss">
+				</div>
+				
+				<div class="break"></div>
+				
+				<div id="topic-menu">
+					<ul>
+						<li>Home</li>
+						<li>World</li>
+						<li class="selected">UK</li>
+						<li>N. Ireland</li>
+						<li>Scotland</li>
+						<li>Wales</li>
+						<li>Business</li>
+						<li>Politics</li>
+						<li>Health</li>
+						<li>Education</li>
+						<li>Sci/Environment</li>
+						<li>Technology</li>
+						<li style="border-right:none;">Entertainment & Arts</li>
+					</ul>				
+				</div>
+			</div>
+		</div>
+		<div class="break"></div>	
+		<div id="content">
+			<div class="fixed-width">
+				<p><span class="date">5 February 2015</span> Last updated at 19:57 ET</p>
+				<h1>Glitter guilty of child sex abuse</h1>
+				<div class="break"></div>
+				
+					<img class="headline-image" src="http://news.bbcimg.co.uk/media/images/80816000/jpg/_80816052_glitter1.jpg" />
+					<div class="news-item">	
+						<p>Former pop star Gary Glitter is found guilty of sexually 
+						abusing three young girls between 1975 and 1980.</p>
+						<a href="#">The fall of a rock star</a> <br>
+						<a href="#">Profile: Gary Glitter</a>
+						<a href="#" >Glitter guilty of six abuse charges</a> <br>
+						<a href="#" >'I was really scared,' says victim</a><br>
+						<a href="#" >Gary Glitter victim on her ordeal</a><br>
+					</div>
+					<div id="watch-div">
+						<h2>Watch/Listen</h2>
+					</div>
+				</div>
+				</div>
+			</div>		
+		<!--</div>	
+	</div>-->
+
+
+</body>
+
+</html>
