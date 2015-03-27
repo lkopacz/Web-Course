@@ -9,21 +9,21 @@
 
 <style type="text/css">
 
-body {
-	font-family: Verdana, Geneva, sans-serif;
-}
+	body {
+		font-family: Verdana, Geneva, sans-serif;
+	}
 
-#box1 {
-	width:200px;
-	height:200px;
-	background-color: red;
-	display: none;
-	position: relative;
-}
+	#box1 {
+		width:200px;
+		height:200px;
+		background-color: red;
+		display: none;
+		position: relative;
+	}
 
-.bold {
-	font-weight: bold;
-}
+	.bold {
+		font-weight: bold;
+	}
 
 </style>
 </head>
