@@ -85,8 +85,19 @@
 		top: 10px;
 	}
 	
-	#cssContainer, #jsContainer, #resultContainer{
+	#CSSContainer, #JSContainer {
 		display: none;	
+	}
+
+	iframe {
+		height: 100%;
+		position: relative;
+		left: 20px;
+		border: none;
+	}
+	
+	.selected {
+		background-color: grey;
 	}
 </style>
 
@@ -111,10 +122,10 @@
 			</div>
 			
 			<ul id="toggles">
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>JS</li>
-				<li style="border:none;">Result</li>
+				<li class="toggle selected">HTML</li>
+				<li class="toggle">CSS</li>
+				<li class="toggle">JS</li>
+				<li class="toggle selected" style="border:none;">Result</li>
 			
 			</ul>
 		
@@ -122,7 +133,7 @@
 		
 		<div class="clear"></div>
 		
-		<div class="codeContainer" id="htmlContainer">
+		<div class="codeContainer" id="HTMLContainer">
 			
 			<div class="codeLabel">HTML</div>			
 			
@@ -130,7 +141,7 @@
 		
 		</div>
 		
-		<div class="codeContainer" id="cssContainer">
+		<div class="codeContainer" id="CSSContainer">
 			
 			<div class="codeLabel">CSS</div>			
 			
@@ -138,7 +149,7 @@
 		
 		</div>
 		
-		<div class="codeContainer" id="jsContainer">
+		<div class="codeContainer" id="JSContainer">
 			
 			<div class="codeLabel">JS</div>			
 			
@@ -146,7 +157,7 @@
 		
 		</div>
 		
-		<div class="codeContainer" id="resultContainer">
+		<div class="codeContainer" id="ResultContainer">
 			
 			<div class="codeLabel">Results</div>			
 			
@@ -163,7 +174,18 @@
 		var menuBarHeight=$("#menuBar").height();
 		var codeContainerHeight= windowHeight - menuBarHeight;
 		$(".codeContainer").height(codeContainerHeight+"px");
-	
+		
+		$(".toggle").click(function() {
+			$(this).toggleClass("selected");
+			var activeDiv = $(this).html();
+			$("#"+activeDiv+"Container").toggle();
+			var number = $('.codeContainer').filter(function() {
+ 				return $(this).css('display') !== 'none';
+			}).length;
+			var wide = 100/number;
+			$(".codeContainer").width(wide + "%");
+		});
+
 	</script>
  
 </body>
