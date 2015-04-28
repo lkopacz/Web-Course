@@ -76,6 +76,7 @@
 		border-right: 1px solid grey;
 		font-family: monotype;
 		font-size: 90%;
+		box-sizing: border-box;
 		padding: 3px;
 	}
 
@@ -137,7 +138,7 @@
 			
 			<div class="codeLabel">HTML</div>			
 			
-			<textarea>Sample Code</textarea>
+			<textarea id="htmlCode"></textarea>
 		
 		</div>
 		
@@ -145,7 +146,7 @@
 			
 			<div class="codeLabel">CSS</div>			
 			
-			<textarea>Sample Code</textarea>
+			<textarea id="cssCode"></textarea>
 		
 		</div>
 		
@@ -153,7 +154,7 @@
 			
 			<div class="codeLabel">JS</div>			
 			
-			<textarea>Sample Code</textarea>
+			<textarea id="jsCode"></textarea>
 		
 		</div>
 		
@@ -161,7 +162,7 @@
 			
 			<div class="codeLabel">Results</div>			
 			
-			<iframe></iframe>
+			<iframe id="resultframe"></iframe>
 		
 		</div>
 	
@@ -184,6 +185,14 @@
 			}).length;
 			var wide = 100/number;
 			$(".codeContainer").width(wide + "%");
+		});
+		
+		$("#runButton").click(function () {
+			$("iframe").contents().find("html").html('<style>' + $("#cssCode").val() + '</style>' + $("#htmlCode").val());
+			
+			document.getElementById("resultframe").contentWindow.eval($("#jsCode").val());	
+			//I'm aware that this is a security implication.  
+			//This code is primarily for learning/testing purposes and is not meant to be run on a live site. 
 		});
 
 	</script>
