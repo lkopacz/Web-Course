@@ -14,6 +14,40 @@
 		#header-makeup {
 			font-weight: bold;	
 		}    
+		
+		#topContainer {
+			background-image: url('app_background.jpg');	
+			height: 500px;	
+			width: 100%;
+			background-size: cover;
+		}
+		
+		#topRow {
+			margin-top: 150px;
+			text-align: center;
+		}
+		
+		#topRow h1 {
+			font-size: 300%;		
+		}
+		
+		.bold {
+			font-weight: bold;		
+		}
+		
+		.marginTop {
+			margin-top: 30px;
+		}
+		
+		.center {
+			text-align: center;		
+		}
+		
+		.title {
+			margin-top: 100px;
+			font-size: 300%;
+		}
+		
     
     </style>
 
@@ -26,7 +60,7 @@
   </head>
   <body>
 
-	<div class="navbar navbar-default">
+	<div class="navbar navbar-default navbar-fixed-top">
 
  		<div class="container">
 
@@ -78,13 +112,111 @@
  	</div>
 
     
-	<div class="container">
+	<div class="container contentContainer" id="topContainer">
+		
+		<div class="row"> 			
+			
+			<div class="col-md-6 col-md-offset-3" id="topRow">
+
+				<h1 class="marginTop">Makeup Tutorials</h1>	
+				
+				<p class="lead">This is why you should download this app</p>		
+			
+				<p>This is an app that has makeup tutorials galore.  Helps the makeup obsessed learn tips and tricks</p>			
+
+				<p class="bold marginTop">Interested? Join our mailing list!</p>
+				
+				<form class="marginTop">
+				
+					<div class="input-group">
+						<span class="input-group-addon"></span>
+						<input type="email" class="form-control" placeholder="Your email" />
+					
+					</div>
+					
+					<input type="submit" class="btn btn-success btn-lg marginTop" />
+				
+				</form>			
+			
+			</div>
 	
+		</div>	
 	
+	</div>
+	
+	<div class="container contentContainer">
+	
+		<div class="row">
+		
+			<h1 class="center title">This app is awesome becauseeeeee</h1>		
+			
+			<p class="lead center">Sample information about why this app is so awesome</p>
+		
+		</div>
+		
+		<div class="row">
+		
+			<div class="col-md-4 marginTop">
+			
+					<h2><span class="glyphicon glyphicon-ok"></span> Header</h2>
+			
+					<p>Bacon ipsum dolor amet pork chop shank t-bone, 
+					turducken ham hock biltong chicken andouille 
+					shankle cupim strip steak ground round. T-bone 
+					swine rump chicken boudin strip steak. Spare ribs 
+					rump pancetta brisket. Cow tri-tip prosciutto 
+					bacon fatback, corned beef brisket cupim tail 
+					pig shank hamburger jerky.</p>
+					
+					<button class="btn btn-success marginTop">Learn More</button>
+			
+			</div>
+			
+			<div class="col-md-4 marginTop">
+			
+					<h2><span class="glyphicon glyphicon-triangle-right"></span> Header</h2>
+			
+					<p>Bacon ipsum dolor amet pork chop shank t-bone, 
+					turducken ham hock biltong chicken andouille 
+					shankle cupim strip steak ground round. T-bone 
+					swine rump chicken boudin strip steak. Spare ribs 
+					rump pancetta brisket. Cow tri-tip prosciutto 
+					bacon fatback, corned beef brisket cupim tail 
+					pig shank hamburger jerky.</p>
+					
+					<button class="btn btn-success marginTop">Sign Up</button>
+			
+			</div>
+			
+			<div class="col-md-4 marginTop">
+			
+					<h2><span class="glyphicon glyphicon-envelope"></span> Header</h2>
+			
+					<p>Bacon ipsum dolor amet pork chop shank t-bone, 
+					turducken ham hock biltong chicken andouille 
+					shankle cupim strip steak ground round. T-bone 
+					swine rump chicken boudin strip steak. Spare ribs 
+					rump pancetta brisket. Cow tri-tip prosciutto 
+					bacon fatback, corned beef brisket cupim tail 
+					pig shank hamburger jerky.</p>
+					
+					<button class="btn btn-success marginTop">Contact Us</button>
+			
+			</div>	
+		
+		</div>
+		
 	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    
+	<script>
+		
+		$(".contentContainer").css("min-height", $(window).height());		
+		
+	</script>    
+    
   </body>
 </html>
